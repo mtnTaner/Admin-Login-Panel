@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Admin Paneli</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="/logo.png" />
+</head>
+
+<body>
+
+    <form action="">
+        <H1><span>nova</span>dan</H1>
+        <input id="user" type="text" name="kullanıcı_adı" placeholder="Kullanıcı Adı" >
+        <input id="password" type="password" name="sifre" placeholder="Şifre">
+        <i class="fa fa-eye parola" id="passwordgöster" onClick="passwordGoster('password', this)"> </i>
+        <div class="rememberMe">
+            <input type="checkbox" id="chckbx" value="0">
+            Beni Hatırla
+        </div>
+        <input id="grs" type="submit" onclick="girisonay()" value="Giriş yap">
+
+
+
+
+    </form>
+
+    <footer>
+        <img src="chat.png" id="chat" alt="" onclick="gizleGoster('name');">
+    </footer>
+    <div id="name" class="login" style="display: none;">
+        <button id="close2" onclick="gizleGoster('name');"><i class="fa fa-times"></i></button>
+        <span>Sohbete bağlanmak için isminizi giriniz.</span>
+        <input type="text" id="myName" placeholder="İsim Giriniz" autocomplete="off">
+        <button id="shbtbslt" onclick="sohbeteBasla(); "><i class="fa fa-comment"></i> Sohbete Başla </button>
+    </div>
+
+    <div id="canlı" class="conteiner" style="display: none;">
+
+
+        <div>
+            <button id="close" onclick="gizleGoster('canlı'),gizleGoster('name');"><i class="fa fa-times"></i></button>
+
+
+            <h2>Canlı Destek</h2>
+        </div>
+        <ul class="messages">
+            <li class="message">
+                <p class="text">Merhaba novadan'dan Taner ben nasıl yardımcı olabilirim?</p>
+                <span class="sender">novadan destek</span>
+                <span class="date">12.00</span>
+            </li>
+
+
+
+        </ul>
+        <div class="input">
+            <input type="text" id="myInput">
+            <button id="msjgndr" onclick="mesajGonder();"><i class="fa fa-paper-plane"></i></button>
+
+        </div>
+    </div>
+
+
+    <script src="göster.js"></script>
+    <script src="passwordgöster.js"></script>
+    <script src="app.js"></script>
+    <script src="enter.js"></script>
+    <script src="giriş.js"></script>
+
+
+</body>
+
+</html>
